@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function(){
   });
   /* Mémorise la langue choisie par le visiteur */
   Array.prototype.forEach.call(document.querySelectorAll('[data-lang-link]'), function(a){
-    a.addEventListener('click', function(){ try { localStorage.setItem('ka-lang', a.getAttribute('data-lang-link')); } catch(e){} });
+    a.addEventListener('click', function(){ if(window.KA_SAVE){ window.KA_SAVE(a.getAttribute('data-lang-link')); } });
   });
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
