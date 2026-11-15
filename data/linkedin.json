@@ -1,0 +1,29 @@
+{
+  "_mode_emploi": "Pour ajouter un post : copiez un bloc, collez-le en haut de la liste 'posts', remplacez la date (AAAA-MM-JJ), le titre, le texte et le lien du post LinkedIn. Supprimez la ligne \"exemple\": true. L'image est facultative (lien https ou fichier dans assets/img/).",
+  "posts": [
+    {
+      "date": "2026-11-04",
+      "titre": "Ce que diriger une flotte de véhicules m'a appris sur le management",
+      "texte": "Gérer des chauffeurs, des véhicules et des imprévus chaque jour, c'est une école du leadership. Trois leçons que j'applique désormais aussi dans mon agence…",
+      "url": "https://www.linkedin.com/in/kevinahiavee",
+      "image": "",
+      "exemple": true
+    },
+    {
+      "date": "2026-10-28",
+      "titre": "Nos marques doivent raconter leur histoire avec leurs propres codes",
+      "texte": "Trop de marques africaines copient des références venues d'ailleurs. Pourtant, ce qui fait la différence, c'est ce que nous seuls pouvons raconter…",
+      "url": "https://www.linkedin.com/in/kevinahiavee",
+      "image": "",
+      "exemple": true
+    },
+    {
+      "date": "2026-10-21",
+      "titre": "Save the date : Forum des Métiers de la Comm', 11 et 12 décembre",
+      "texte": "La 3e édition du Forum revient à Cotonou. Étudiants, jeunes talents, professionnels : deux jours pour découvrir les métiers et rencontrer ceux qui les font…",
+      "url": "https://www.linkedin.com/in/kevinahiavee",
+      "image": "",
+      "exemple": true
+    }
+  ]
+}
