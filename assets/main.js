@@ -28,15 +28,51 @@ document.addEventListener('DOMContentLoaded', function(){
   /* Cartes entreprises : une seule visible à la fois. La suivante n'entre
      à l'écran qu'une fois la précédente épinglée (indispensable sur grands écrans) */
   var stackCards = $$('#ka-track .vp:not(.vp--intro)');
+  var stackIntro = $('#ka-track .vp--intro');
   function stackGaps(){
+    var vh = window.innerHeight, n = stackCards.length;
+    if(!n){ return; }
+    stackCards.forEach(function(card){ card.style.top = ''; card.style.marginBottom = ''; card.style.marginTop = ''; card.style.minHeight = ''; });
+    var base = parseFloat(getComputedStyle(stackCards[0]).marginBottom) || 0;
+    /* Grands écrans : la section s'immobilise dès l'intro (« Mes entreprises »)
+       et les cartes viennent s'empiler juste en dessous, en occupant le reste de l'écran */
+    var shift = 0;
+    if(stackIntro){
+      stackIntro.classList.remove('is-pinned'); stackIntro.style.top = '';
+      if(window.matchMedia('(min-width: 1000px)').matches){
+        var ih = stackIntro.offsetHeight;
+        var lastTop = parseFloat(getComputedStyle(stackCards[n - 1]).top) || 0;
+        var avail = vh - lastTop - ih - 16;
+        stackCards.forEach(function(c){ c.style.minHeight = '0px'; });
+        var natural = Math.max.apply(null, stackCards.map(function(c){ return c.offsetHeight; }));
+        if(natural <= avail){
+          shift = ih;
+          stackIntro.classList.add('is-pinned');
+          stackIntro.style.top = (parseFloat(getComputedStyle(stackCards[0]).top) || 0) + 'px';
+          stackCards.forEach(function(c){ c.style.minHeight = avail + 'px'; });
+        } else {
+          /* Sans intro épinglée : les cartes occupent quand même la hauteur de l'écran */
+          var avail2 = vh - lastTop - 16;
+          stackCards.forEach(function(c){ c.style.minHeight = natural <= avail2 ? avail2 + 'px' : ''; });
+        }
+      }
+    }
+    /* L'écart est porté par la carte suivante (et non par la carte épinglée),
+       pour que les cartes déjà posées ne remontent pas pendant l'empilement */
+    var bottoms = [];
     stackCards.forEach(function(card, i){
-      if(i === stackCards.length - 1){ return; }
-      card.style.marginBottom = '';
-      var cs = getComputedStyle(card);
-      var base = parseFloat(cs.marginBottom) || 0;
-      var need = window.innerHeight - (parseFloat(cs.top) || 0) - card.offsetHeight + 16;
-      if(need > base){ card.style.marginBottom = need + 'px'; }
+      var top = (parseFloat(getComputedStyle(card).top) || 0) + shift;
+      if(shift){ card.style.top = top + 'px'; }
+      bottoms.push(top + card.offsetHeight);
+      if(i < n - 1){ card.style.marginBottom = '0px'; }
+      if(i > 0){
+        var prev = stackCards[i - 1];
+        var prevTop = bottoms[i - 1] - prev.offsetHeight;
+        card.style.marginTop = Math.max(base, vh - prevTop - prev.offsetHeight + 16) + 'px';
+      }
     });
+    var lastBottom = bottoms[n - 1], maxBottom = Math.max.apply(null, bottoms);
+    if(maxBottom > lastBottom){ stackCards[n - 1].style.marginBottom = (maxBottom - lastBottom) + 'px'; }
   }
   stackGaps();
   window.addEventListener('load', stackGaps);
