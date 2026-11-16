@@ -342,6 +342,25 @@ a{color:inherit}
 .list-pager{max-width:var(--max);margin:clamp(28px,4vw,48px) auto 0;padding-left:var(--gut-l);padding-right:var(--gut-r);display:flex;justify-content:space-between;gap:12px}
 @media (max-width:560px){.read-pager{grid-template-columns:minmax(0,1fr)}.read-pager .next{grid-column:1}.author{grid-template-columns:minmax(0,1fr)}}
 
+/* Articles du blog sur grand écran : titre large, colonne de lecture confortable
+   et rail latéral (partage) qui reste visible pendant la lecture */
+@media (min-width:1200px){
+  .read{--rg:clamp(48px,5vw,88px)}
+  .read:not(.read-pager){max-width:calc(57rem + var(--rg) + var(--gut-l) + var(--gut-r));display:grid;grid-template-columns:13rem minmax(0,44rem);column-gap:var(--rg);grid-auto-flow:row dense;justify-content:center}
+  .read:not(.read-pager) > *{grid-column:1/-1}
+  .read .read-title{max-width:22ch;font-size:clamp(3.2rem,4.2vw,4.4rem)}
+  .read .read-meta{margin-bottom:clamp(40px,4vw,56px)}
+  .read > .post-body,.read > .author{grid-column:2}
+  .read > .post-body{font-size:1.14rem}
+  .read > .share{grid-column:1;grid-row:span 2;align-self:start;position:sticky;top:7rem;flex-direction:column;align-items:stretch;gap:8px;margin:0;padding:0;border:0}
+  .read > .share > span{margin:0 0 6px}
+  .read > .share a,.read > .share button{text-align:left;padding:12px 16px}
+  .read > .author{margin-top:56px}
+  .read.read-pager{max-width:calc(57rem + var(--rg) + var(--gut-l) + var(--gut-r));padding-left:calc(var(--gut-l) + 13rem + var(--rg))}
+  .list-head .h2{font-size:clamp(3.2rem,4.2vw,4.4rem)}
+  .bgrid{grid-template-columns:repeat(auto-fill,minmax(min(100%,20rem),1fr));gap:28px}
+}
+
 /* Grands écrans : tout le site s'agrandit proportionnellement */
 @media (min-width:1600px){html{font-size:112.5%}}
 @media (min-width:1900px){html{font-size:125%}}
