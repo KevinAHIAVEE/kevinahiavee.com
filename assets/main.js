@@ -25,6 +25,24 @@ document.addEventListener('DOMContentLoaded', function(){
   function $(s, c){ return (c || document).querySelector(s); }
   function $$(s, c){ return Array.prototype.slice.call((c || document).querySelectorAll(s)); }
 
+  /* Cartes entreprises : une seule visible à la fois. La suivante n'entre
+     à l'écran qu'une fois la précédente épinglée (indispensable sur grands écrans) */
+  var stackCards = $$('#ka-track .vp:not(.vp--intro)');
+  function stackGaps(){
+    stackCards.forEach(function(card, i){
+      if(i === stackCards.length - 1){ return; }
+      card.style.marginBottom = '';
+      var cs = getComputedStyle(card);
+      var base = parseFloat(cs.marginBottom) || 0;
+      var need = window.innerHeight - (parseFloat(cs.top) || 0) - card.offsetHeight + 16;
+      if(need > base){ card.style.marginBottom = need + 'px'; }
+    });
+  }
+  stackGaps();
+  window.addEventListener('load', stackGaps);
+  var gapT; window.addEventListener('resize', function(){ clearTimeout(gapT); gapT = setTimeout(stackGaps, 150); });
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(stackGaps); }
+
   /* E-mail reconstitué en JavaScript, pour le cacher aux robots qui collectent les adresses */
   var mailEl = $('#ka-mail');
   if(mailEl){
@@ -246,6 +264,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   /* Entreprises : cartes empilées comme des calques qui se recouvrent au scroll */
   var cards = $$('#ka-track .vp:not(.vp--intro)');
+  ST.addEventListener('refreshInit', stackGaps);
   cards.forEach(function(card, i){
     var next = cards[i + 1];
     if(!next){ return; }
