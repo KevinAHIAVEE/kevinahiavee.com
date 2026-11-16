@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function(){
        et les cartes viennent s'empiler juste en dessous, en occupant le reste de l'écran */
     var shift = 0;
     if(stackIntro){
-      stackIntro.classList.remove('is-pinned'); stackIntro.style.top = '';
+      stackIntro.classList.remove('is-pinned'); stackIntro.style.top = ''; stackIntro.style.marginBottom = '';
       if(window.matchMedia('(min-width: 1000px)').matches){
         var ih = stackIntro.offsetHeight;
         var lastTop = parseFloat(getComputedStyle(stackCards[n - 1]).top) || 0;
@@ -59,20 +59,31 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     /* L'écart est porté par la carte suivante (et non par la carte épinglée),
        pour que les cartes déjà posées ne remontent pas pendant l'empilement */
-    var bottoms = [];
+    var bottoms = [], gaps = [];
     stackCards.forEach(function(card, i){
       var top = (parseFloat(getComputedStyle(card).top) || 0) + shift;
       if(shift){ card.style.top = top + 'px'; }
       bottoms.push(top + card.offsetHeight);
-      if(i < n - 1){ card.style.marginBottom = '0px'; }
-      if(i > 0){
-        var prev = stackCards[i - 1];
-        var prevTop = bottoms[i - 1] - prev.offsetHeight;
-        card.style.marginTop = Math.max(base, vh - prevTop - prev.offsetHeight + 16) + 'px';
-      }
+      gaps.push(i > 0 ? Math.max(base, vh - (bottoms[i - 1] - stackCards[i - 1].offsetHeight) - stackCards[i - 1].offsetHeight + 16) : 0);
     });
-    var lastBottom = bottoms[n - 1], maxBottom = Math.max.apply(null, bottoms);
-    if(maxBottom > lastBottom){ stackCards[n - 1].style.marginBottom = (maxBottom - lastBottom) + 'px'; }
+    /* Sortie de section : quand la dernière carte est posée, l'intro et toutes les
+       cartes remontent ensemble. Chaque élément épinglé reçoit une marge basse qui
+       aligne sa limite sur celle de la dernière carte (compensée par la carte suivante). */
+    var end = bottoms[n - 1];
+    if(stackIntro && stackIntro.classList.contains('is-pinned')){
+      var introEnd = (parseFloat(stackIntro.style.top) || 0) + stackIntro.offsetHeight;
+      var xi = end - introEnd;
+      stackIntro.style.marginBottom = xi + 'px';
+      stackCards[0].style.marginTop = (-xi) + 'px';
+    } else if(stackIntro){
+      stackIntro.style.marginBottom = '';
+    }
+    stackCards.forEach(function(card, i){
+      if(i === n - 1){ card.style.marginBottom = '0px'; return; }
+      var x = end - bottoms[i];
+      card.style.marginBottom = x + 'px';
+      stackCards[i + 1].style.marginTop = (gaps[i + 1] - x) + 'px';
+    });
   }
   stackGaps();
   window.addEventListener('load', stackGaps);
