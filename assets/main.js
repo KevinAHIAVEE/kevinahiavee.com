@@ -186,8 +186,9 @@ document.addEventListener('DOMContentLoaded', function(){
           a.appendChild(top);
           var img = p.image ? (safeUrl(p.image) || (/^assets\//.test(p.image) ? p.image : null)) : null;
           if(img){ var im = document.createElement('img'); im.src = img; im.alt = ''; im.loading = 'lazy'; im.addEventListener('error', function(){ im.hidden = true; }); a.appendChild(im); }
-          if(p.titre){ a.appendChild(el('h3', '', String(p.titre))); }
-          if(p.texte){ var t = String(p.texte); if(t.length > 240){ t = t.slice(0, 240).replace(/\s+\S*$/, '') + '…'; } a.appendChild(el('p', '', t)); }
+          var ti = (LANG !== 'fr' && p['titre_' + LANG]) || p.titre, tx = (LANG !== 'fr' && p['texte_' + LANG]) || p.texte;
+          if(ti){ a.appendChild(el('h3', '', String(ti))); }
+          if(tx){ var t = String(tx); if(t.length > 240){ t = t.slice(0, 240).replace(/\s+\S*$/, '') + '…'; } a.appendChild(el('p', '', t)); }
           a.appendChild(el('span', 'more', I.more));
           rail.appendChild(a);
         });

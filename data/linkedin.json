@@ -1,10 +1,14 @@
 {
-  "_mode_emploi": "Pour ajouter un post : copiez un bloc, collez-le en haut de la liste 'posts', remplacez la date (AAAA-MM-JJ), le titre, le texte et le lien du post LinkedIn. Supprimez la ligne \"exemple\": true. L'image est facultative (lien https ou fichier dans assets/img/).",
+  "_mode_emploi": "Pour ajouter un post : copiez un bloc, collez-le en haut de la liste 'posts', puis remplacez la date (AAAA-MM-JJ), le titre, le texte et le lien du post LinkedIn. Les champs titre_en/texte_en (anglais) et titre_es/texte_es (espagnol) sont facultatifs : sans eux, le texte français s'affiche. L'image est facultative (lien https ou fichier dans assets/img/).",
   "posts": [
     {
       "date": "2026-11-02",
       "titre": "Étude de cas : notre accompagnement du 8e Congrès des Experts-Comptables de l'UEMOA",
       "texte": "Deux jours, les huit pays de l'Union, des organisations internationales et le Ministre des Finances. Retour sur la façon dont KK SMART COM a accompagné l'Ordre des Experts-Comptables du Bénin pour ce rendez-vous régional.",
+      "titre_en": "Case study: how we supported the 8th UEMOA Congress of Chartered Accountants",
+      "texte_en": "Two days, all eight countries of the Union, international organizations and the Minister of Finance. A look back at how KK SMART COM supported the Benin Order of Chartered Accountants for this regional event.",
+      "titre_es": "Caso práctico: nuestro acompañamiento del 8.º Congreso de Expertos Contables de la UEMOA",
+      "texte_es": "Dos días, los ocho países de la Unión, organismos internacionales y el Ministro de Finanzas. Así acompañó KK SMART COM a la Orden de Expertos Contables de Benín en esta cita regional.",
       "url": "https://www.linkedin.com/pulse/retour-sur-le-8e-congr%C3%A8s-des-experts-comptables-de-luemoa-b131f/",
       "image": ""
     },
@@ -12,6 +16,10 @@
       "date": "2026-10-26",
       "titre": "Trois Ordres professionnels à la même table : la confiance des institutions",
       "texte": "Au dîner de gala du 8e Congrès de l'UEMOA, je me suis retrouvé aux côtés de trois Ordres professionnels dont KK SMART COM porte la communication cette année. Une étape qui dit beaucoup du chemin parcouru par l'agence.",
+      "titre_en": "Three professional bodies at the same table: the trust of institutions",
+      "texte_en": "At the gala dinner of the 8th UEMOA Congress, I sat alongside three professional bodies whose communications KK SMART COM handles this year. A milestone that says a lot about how far the agency has come.",
+      "titre_es": "Tres colegios profesionales en la misma mesa: la confianza de las instituciones",
+      "texte_es": "En la cena de gala del 8.º Congreso de la UEMOA me senté junto a tres colegios profesionales cuya comunicación lleva KK SMART COM este año. Una etapa que dice mucho del camino recorrido por la agencia.",
       "url": "https://lnkd.in/p/dMdvEd9i",
       "image": ""
     },
@@ -19,6 +27,10 @@
       "date": "2026-10-12",
       "titre": "NIARIC : construire une communication à la hauteur de son expertise",
       "texte": "Une étude de cas de KK SMART COM sur notre méthode : partir du savoir-faire réel d'un client pour bâtir une image qui lui ressemble, et qui convainc ses clients et partenaires.",
+      "titre_en": "NIARIC: building communications that match its expertise",
+      "texte_en": "A KK SMART COM case study on our method: start from a client's real know-how to build an image that fits them and convinces their customers and partners.",
+      "titre_es": "NIARIC: construir una comunicación a la altura de su experiencia",
+      "texte_es": "Un caso práctico de KK SMART COM sobre nuestro método: partir del saber hacer real de un cliente para construir una imagen que se le parezca y que convenza a sus clientes y socios.",
       "url": "https://www.linkedin.com/pulse/niaric-construire-une-communication-qui-refl%C3%A8te-son-expertise-il9kf/",
       "image": ""
     },
@@ -26,6 +38,10 @@
       "date": "2026-08-15",
       "titre": "EcoMoov : quand la communication accompagne la mobilité",
       "texte": "Une étude de cas qui me tient à cœur, parce qu'elle croise mes deux métiers : la communication avec KK SMART COM et la mobilité avec KOKA MOBILITY. Comment repenser l'image d'un acteur de la mobilité.",
+      "titre_en": "EcoMoov: when communications drive mobility",
+      "texte_en": "A case study close to my heart, because it brings my two trades together: communications with KK SMART COM and mobility with KOKA MOBILITY. How to rethink the image of a mobility player.",
+      "titre_es": "EcoMoov: cuando la comunicación acompaña la movilidad",
+      "texte_es": "Un caso práctico que me importa mucho, porque une mis dos oficios: la comunicación con KK SMART COM y la movilidad con KOKA MOBILITY. Cómo repensar la imagen de un actor de la movilidad.",
       "url": "https://www.linkedin.com/pulse/ecomoov-repenser-la-mobilit%C3%A9-%C3%A0-travers-une-communication-plus-fgkrf/",
       "image": ""
     },
@@ -33,6 +49,10 @@
       "date": "2026-08-10",
       "titre": "Chic Tuk Tuk : nous lançons la première plateforme de réservation de tricycles",
       "texte": "Après une année au volant d'un tricycle, j'ai lancé avec mon équipe chictuktuk.com. Réservation jusqu'à 24 h à l'avance, abonnements courts ou longs, trajets professionnels et transport scolaire.",
+      "titre_en": "Chic Tuk Tuk: we are launching the first tricycle booking platform",
+      "texte_en": "After a year behind the wheel of a tricycle, my team and I launched chictuktuk.com. Bookings up to 24 hours ahead, short or long subscriptions, business trips and school transport.",
+      "titre_es": "Chic Tuk Tuk: lanzamos la primera plataforma de reserva de triciclos",
+      "texte_es": "Tras un año al volante de un triciclo, lancé con mi equipo chictuktuk.com. Reservas con hasta 24 h de antelación, abonos cortos o largos, trayectos profesionales y transporte escolar.",
       "url": "https://lnkd.in/p/diikMTX9",
       "image": ""
     },
@@ -40,6 +60,10 @@
       "date": "2026-08-03",
       "titre": "Financer l'ambition : ce que j'ai retenu du Forum Diaspora Connect 2026",
       "texte": "Invité au Forum Diaspora Connect, j'ai suivi l'atelier « Financer l'ambition » avec Idawa Capital et APIEx Bénin : mécanismes de financement, dossier solide et opportunités pour les entrepreneurs béninois.",
+      "titre_en": "Financing ambition: my takeaways from the Diaspora Connect Forum 2026",
+      "texte_en": "Invited to the Diaspora Connect Forum, I attended the “Financing ambition” workshop with Idawa Capital and APIEx Benin: funding mechanisms, building a solid case and opportunities for Beninese entrepreneurs.",
+      "titre_es": "Financiar la ambición: lo que me llevo del Foro Diaspora Connect 2026",
+      "texte_es": "Invitado al Foro Diaspora Connect, seguí el taller «Financiar la ambición» con Idawa Capital y APIEx Benín: mecanismos de financiación, un expediente sólido y oportunidades para los emprendedores benineses.",
       "url": "https://lnkd.in/p/dE3TrQ8g",
       "image": ""
     },
@@ -47,6 +71,10 @@
       "date": "2026-07-15",
       "titre": "Bénin : un Ministère dédié à l'IA, un tournant pour le numérique",
       "texte": "Notre lecture, chez KK SMART COM, de la création d'un Ministère dédié à l'intelligence artificielle, et de ce que ce choix peut changer pour les entreprises et l'écosystème numérique béninois.",
+      "titre_en": "Benin: a Ministry dedicated to AI, a turning point for digital",
+      "texte_en": "Our take at KK SMART COM on the creation of a Ministry dedicated to artificial intelligence, and what this choice could change for businesses and Benin's digital ecosystem.",
+      "titre_es": "Benín: un Ministerio dedicado a la IA, un punto de inflexión para lo digital",
+      "texte_es": "Nuestra lectura, en KK SMART COM, de la creación de un Ministerio dedicado a la inteligencia artificial y de lo que esta decisión puede cambiar para las empresas y el ecosistema digital beninés.",
       "url": "https://www.linkedin.com/pulse/b%C3%A9nin-la-cr%C3%A9ation-dun-minist%C3%A8re-d%C3%A9di%C3%A9-%C3%A0-lia-marque-un-tournant-osmhf/",
       "image": ""
     },
@@ -54,6 +82,10 @@
       "date": "2026-07-10",
       "titre": "Chic Tuk Tuk étend sa couverture à Cotonou et Abomey-Calavi",
       "texte": "La flotte de tricycles passagers de KOKA MOBILITY SARL dessert désormais plusieurs nouveaux quartiers de Cotonou et d'Abomey-Calavi. Une étape de plus vers un transport du quotidien simple et prévisible.",
+      "titre_en": "Chic Tuk Tuk expands its coverage in Cotonou and Abomey-Calavi",
+      "texte_en": "KOKA MOBILITY SARL's fleet of passenger tricycles now serves several new neighborhoods in Cotonou and Abomey-Calavi. One more step toward simple, predictable everyday transport.",
+      "titre_es": "Chic Tuk Tuk amplía su cobertura en Cotonú y Abomey-Calavi",
+      "texte_es": "La flota de triciclos de pasajeros de KOKA MOBILITY SARL ya da servicio a varios barrios nuevos de Cotonú y Abomey-Calavi. Un paso más hacia un transporte cotidiano sencillo y previsible.",
       "url": "https://lnkd.in/p/dKYgV5PW",
       "image": ""
     },
@@ -61,6 +93,10 @@
       "date": "2026-05-15",
       "titre": "DECOFI 2026 : cinq jours de couverture médiatique et audiovisuelle",
       "texte": "Cinq jours intenses aux côtés de l'OECCA Bénin pour couvrir le DECOFI 2026 avec les équipes de KK SMART COM. Un vrai défi d'organisation, et la preuve de ce que notre pôle audiovisuel sait livrer.",
+      "titre_en": "DECOFI 2026: five days of media and audiovisual coverage",
+      "texte_en": "Five intense days alongside OECCA Benin covering DECOFI 2026 with the KK SMART COM teams. A real organizational challenge, and proof of what our audiovisual unit can deliver.",
+      "titre_es": "DECOFI 2026: cinco días de cobertura mediática y audiovisual",
+      "texte_es": "Cinco días intensos junto a la OECCA Benín para cubrir el DECOFI 2026 con los equipos de KK SMART COM. Un verdadero reto de organización y la prueba de lo que sabe entregar nuestro polo audiovisual.",
       "url": "https://lnkd.in/p/dQgVsrG2",
       "image": ""
     },
@@ -68,6 +104,10 @@
       "date": "2026-04-15",
       "titre": "Ce qu'un entrepreneur gagne à s'entourer de comptables agréés",
       "texte": "Cette expérience avec l'OECCA Bénin m'a fait voir les réalités des professionnels comptables. Et, en tant qu'entrepreneur, j'ai découvert les facilités dont bénéficient les entreprises qui s'entourent de professionnels agréés.",
+      "titre_en": "What an entrepreneur gains from working with chartered accountants",
+      "texte_en": "This experience with OECCA Benin showed me the realities of accounting professionals. And as an entrepreneur, I discovered the advantages enjoyed by companies that work with chartered professionals.",
+      "titre_es": "Lo que gana un emprendedor al rodearse de contables colegiados",
+      "texte_es": "Esta experiencia con la OECCA Benín me mostró la realidad de los profesionales contables. Y, como emprendedor, descubrí las ventajas de las empresas que se rodean de profesionales colegiados.",
       "url": "https://lnkd.in/p/duTr9t4H",
       "image": ""
     },
@@ -75,6 +115,10 @@
       "date": "2026-03-10",
       "titre": "La guerre de communication : nouvelle arme décisive des conflits modernes ?",
       "texte": "Dans les conflits actuels, la bataille se joue aussi sur le terrain de l'information. Dans cet article, j'analyse pourquoi la communication est devenue un outil stratégique à part entière.",
+      "titre_en": "The communication war: a decisive new weapon in modern conflicts?",
+      "texte_en": "In today's conflicts, the battle is also fought on the information front. In this article, I explain why communication has become a strategic tool in its own right.",
+      "titre_es": "La guerra de la comunicación: ¿nueva arma decisiva de los conflictos modernos?",
+      "texte_es": "En los conflictos actuales, la batalla también se libra en el terreno de la información. En este artículo analizo por qué la comunicación se ha convertido en una herramienta estratégica por derecho propio.",
       "url": "https://www.linkedin.com/pulse/la-guerre-de-communication-nouvelle-arme-d%C3%A9cisive-des-kevin-ahiavee-i2hhe/",
       "image": ""
     },
@@ -82,6 +126,10 @@
       "date": "2026-02-23",
       "titre": "Le jour où j'ai troqué ma casquette de directeur contre celle de chauffeur de tricycle",
       "texte": "Brutal pour l'ego, éprouvant pour le corps, mais une leçon essentielle : on ne comprend jamais un business tant qu'on ne l'a pas vécu sur le terrain. Le transport n'est pas une ligne Excel.",
+      "titre_en": "The day I swapped my CEO hat for a tricycle driver's cap",
+      "texte_en": "Brutal for the ego, exhausting for the body, but an essential lesson: you never understand a business until you have lived it on the ground. Transport is not a line in a spreadsheet.",
+      "titre_es": "El día que cambié mi gorra de director por la de conductor de triciclo",
+      "texte_es": "Duro para el ego, agotador para el cuerpo, pero una lección esencial: nunca se entiende un negocio hasta vivirlo sobre el terreno. El transporte no es una línea de Excel.",
       "url": "https://lnkd.in/p/de3_DGUT",
       "image": ""
     }
