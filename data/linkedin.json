@@ -2,28 +2,88 @@
   "_mode_emploi": "Pour ajouter un post : copiez un bloc, collez-le en haut de la liste 'posts', remplacez la date (AAAA-MM-JJ), le titre, le texte et le lien du post LinkedIn. Supprimez la ligne \"exemple\": true. L'image est facultative (lien https ou fichier dans assets/img/).",
   "posts": [
     {
-      "date": "2026-11-04",
-      "titre": "Ce que diriger une flotte de véhicules m'a appris sur le management",
-      "texte": "Gérer des chauffeurs, des véhicules et des imprévus chaque jour, c'est une école du leadership. Trois leçons que j'applique désormais aussi dans mon agence…",
-      "url": "https://www.linkedin.com/in/kevinahiavee",
-      "image": "",
-      "exemple": true
+      "date": "2026-11-02",
+      "titre": "Étude de cas : notre accompagnement du 8e Congrès des Experts-Comptables de l'UEMOA",
+      "texte": "Deux jours, les huit pays de l'Union, des organisations internationales et le Ministre des Finances. Retour sur la façon dont KK SMART COM a accompagné l'Ordre des Experts-Comptables du Bénin pour ce rendez-vous régional.",
+      "url": "https://www.linkedin.com/pulse/retour-sur-le-8e-congr%C3%A8s-des-experts-comptables-de-luemoa-b131f/",
+      "image": ""
     },
     {
-      "date": "2026-10-28",
-      "titre": "Nos marques doivent raconter leur histoire avec leurs propres codes",
-      "texte": "Trop de marques africaines copient des références venues d'ailleurs. Pourtant, ce qui fait la différence, c'est ce que nous seuls pouvons raconter…",
-      "url": "https://www.linkedin.com/in/kevinahiavee",
-      "image": "",
-      "exemple": true
+      "date": "2026-10-26",
+      "titre": "Trois Ordres professionnels à la même table : la confiance des institutions",
+      "texte": "Au dîner de gala du 8e Congrès de l'UEMOA, je me suis retrouvé aux côtés de trois Ordres professionnels dont KK SMART COM porte la communication cette année. Une étape qui dit beaucoup du chemin parcouru par l'agence.",
+      "url": "https://lnkd.in/p/dMdvEd9i",
+      "image": ""
     },
     {
-      "date": "2026-10-21",
-      "titre": "Save the date : Forum des Métiers de la Comm', 11 et 12 décembre",
-      "texte": "La 3e édition du Forum revient à Cotonou. Étudiants, jeunes talents, professionnels : deux jours pour découvrir les métiers et rencontrer ceux qui les font…",
-      "url": "https://www.linkedin.com/in/kevinahiavee",
-      "image": "",
-      "exemple": true
+      "date": "2026-10-12",
+      "titre": "NIARIC : construire une communication à la hauteur de son expertise",
+      "texte": "Une étude de cas de KK SMART COM sur notre méthode : partir du savoir-faire réel d'un client pour bâtir une image qui lui ressemble, et qui convainc ses clients et partenaires.",
+      "url": "https://www.linkedin.com/pulse/niaric-construire-une-communication-qui-refl%C3%A8te-son-expertise-il9kf/",
+      "image": ""
+    },
+    {
+      "date": "2026-08-15",
+      "titre": "EcoMoov : quand la communication accompagne la mobilité",
+      "texte": "Une étude de cas qui me tient à cœur, parce qu'elle croise mes deux métiers : la communication avec KK SMART COM et la mobilité avec KOKA MOBILITY. Comment repenser l'image d'un acteur de la mobilité.",
+      "url": "https://www.linkedin.com/pulse/ecomoov-repenser-la-mobilit%C3%A9-%C3%A0-travers-une-communication-plus-fgkrf/",
+      "image": ""
+    },
+    {
+      "date": "2026-08-10",
+      "titre": "Chic Tuk Tuk : nous lançons la première plateforme de réservation de tricycles",
+      "texte": "Après une année au volant d'un tricycle, j'ai lancé avec mon équipe chictuktuk.com. Réservation jusqu'à 24 h à l'avance, abonnements courts ou longs, trajets professionnels et transport scolaire.",
+      "url": "https://lnkd.in/p/diikMTX9",
+      "image": ""
+    },
+    {
+      "date": "2026-08-03",
+      "titre": "Financer l'ambition : ce que j'ai retenu du Forum Diaspora Connect 2026",
+      "texte": "Invité au Forum Diaspora Connect, j'ai suivi l'atelier « Financer l'ambition » avec Idawa Capital et APIEx Bénin : mécanismes de financement, dossier solide et opportunités pour les entrepreneurs béninois.",
+      "url": "https://lnkd.in/p/dE3TrQ8g",
+      "image": ""
+    },
+    {
+      "date": "2026-07-15",
+      "titre": "Bénin : un Ministère dédié à l'IA, un tournant pour le numérique",
+      "texte": "Notre lecture, chez KK SMART COM, de la création d'un Ministère dédié à l'intelligence artificielle, et de ce que ce choix peut changer pour les entreprises et l'écosystème numérique béninois.",
+      "url": "https://www.linkedin.com/pulse/b%C3%A9nin-la-cr%C3%A9ation-dun-minist%C3%A8re-d%C3%A9di%C3%A9-%C3%A0-lia-marque-un-tournant-osmhf/",
+      "image": ""
+    },
+    {
+      "date": "2026-07-10",
+      "titre": "Chic Tuk Tuk étend sa couverture à Cotonou et Abomey-Calavi",
+      "texte": "La flotte de tricycles passagers de KOKA MOBILITY SARL dessert désormais plusieurs nouveaux quartiers de Cotonou et d'Abomey-Calavi. Une étape de plus vers un transport du quotidien simple et prévisible.",
+      "url": "https://lnkd.in/p/dKYgV5PW",
+      "image": ""
+    },
+    {
+      "date": "2026-05-15",
+      "titre": "DECOFI 2026 : cinq jours de couverture médiatique et audiovisuelle",
+      "texte": "Cinq jours intenses aux côtés de l'OECCA Bénin pour couvrir le DECOFI 2026 avec les équipes de KK SMART COM. Un vrai défi d'organisation, et la preuve de ce que notre pôle audiovisuel sait livrer.",
+      "url": "https://lnkd.in/p/dQgVsrG2",
+      "image": ""
+    },
+    {
+      "date": "2026-04-15",
+      "titre": "Ce qu'un entrepreneur gagne à s'entourer de comptables agréés",
+      "texte": "Cette expérience avec l'OECCA Bénin m'a fait voir les réalités des professionnels comptables. Et, en tant qu'entrepreneur, j'ai découvert les facilités dont bénéficient les entreprises qui s'entourent de professionnels agréés.",
+      "url": "https://lnkd.in/p/duTr9t4H",
+      "image": ""
+    },
+    {
+      "date": "2026-03-10",
+      "titre": "La guerre de communication : nouvelle arme décisive des conflits modernes ?",
+      "texte": "Dans les conflits actuels, la bataille se joue aussi sur le terrain de l'information. Dans cet article, j'analyse pourquoi la communication est devenue un outil stratégique à part entière.",
+      "url": "https://www.linkedin.com/pulse/la-guerre-de-communication-nouvelle-arme-d%C3%A9cisive-des-kevin-ahiavee-i2hhe/",
+      "image": ""
+    },
+    {
+      "date": "2026-02-23",
+      "titre": "Le jour où j'ai troqué ma casquette de directeur contre celle de chauffeur de tricycle",
+      "texte": "Brutal pour l'ego, éprouvant pour le corps, mais une leçon essentielle : on ne comprend jamais un business tant qu'on ne l'a pas vécu sur le terrain. Le transport n'est pas une ligne Excel.",
+      "url": "https://lnkd.in/p/de3_DGUT",
+      "image": ""
     }
   ]
 }
