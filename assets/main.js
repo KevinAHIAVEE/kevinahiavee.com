@@ -39,22 +39,21 @@ document.addEventListener('DOMContentLoaded', function(){
     var shift = 0;
     if(stackIntro){
       stackIntro.classList.remove('is-pinned'); stackIntro.style.top = ''; stackIntro.style.marginBottom = '';
-      if(window.matchMedia('(min-width: 1000px)').matches){
-        var ih = stackIntro.offsetHeight;
-        var lastTop = parseFloat(getComputedStyle(stackCards[n - 1]).top) || 0;
-        var avail = vh - lastTop - ih - 16;
-        stackCards.forEach(function(c){ c.style.minHeight = '0px'; });
-        var natural = Math.max.apply(null, stackCards.map(function(c){ return c.offsetHeight; }));
-        if(natural <= avail){
-          shift = ih;
-          stackIntro.classList.add('is-pinned');
-          stackIntro.style.top = (parseFloat(getComputedStyle(stackCards[0]).top) || 0) + 'px';
-          stackCards.forEach(function(c){ c.style.minHeight = avail + 'px'; });
-        } else {
-          /* Sans intro épinglée : les cartes occupent quand même la hauteur de l'écran */
-          var avail2 = vh - lastTop - 16;
-          stackCards.forEach(function(c){ c.style.minHeight = natural <= avail2 ? avail2 + 'px' : ''; });
-        }
+      /* Écran assez large pour la vue web et assez haut : l'intro reste fixée en haut et
+         une seule carte occupe tout le reste de l'écran jusqu'à ce que la suivante la recouvre */
+      var ih = stackIntro.offsetHeight;
+      var lastTop = parseFloat(getComputedStyle(stackCards[n - 1]).top) || 0;
+      var avail = vh - lastTop - ih - 16, avail2 = vh - lastTop - 16;
+      stackCards.forEach(function(c){ c.style.minHeight = '0px'; });
+      var natural = Math.max.apply(null, stackCards.map(function(c){ return c.offsetHeight; }));
+      if(window.innerWidth >= 700 && natural <= avail){
+        shift = ih;
+        stackIntro.classList.add('is-pinned');
+        stackIntro.style.top = (parseFloat(getComputedStyle(stackCards[0]).top) || 0) + 'px';
+        stackCards.forEach(function(c){ c.style.minHeight = avail + 'px'; });
+      } else {
+        /* Sinon : les cartes occupent quand même toute la hauteur de l'écran */
+        stackCards.forEach(function(c){ c.style.minHeight = natural <= avail2 ? avail2 + 'px' : ''; });
       }
     }
     /* L'écart est porté par la carte suivante (et non par la carte épinglée),
@@ -87,7 +86,13 @@ document.addEventListener('DOMContentLoaded', function(){
   }
   stackGaps();
   window.addEventListener('load', stackGaps);
-  var gapT; window.addEventListener('resize', function(){ clearTimeout(gapT); gapT = setTimeout(stackGaps, 150); });
+  var gapT, gapW = window.innerWidth, gapH = window.innerHeight;
+  window.addEventListener('resize', function(){
+    /* Sur mobile, la barre d'adresse qui apparaît ou disparaît ne doit pas tout recalculer */
+    if(window.innerWidth === gapW && Math.abs(window.innerHeight - gapH) < 150){ return; }
+    gapW = window.innerWidth; gapH = window.innerHeight;
+    clearTimeout(gapT); gapT = setTimeout(stackGaps, 150);
+  });
   if(document.fonts && document.fonts.ready){ document.fonts.ready.then(stackGaps); }
 
   /* E-mail reconstitué en JavaScript, pour le cacher aux robots qui collectent les adresses */
