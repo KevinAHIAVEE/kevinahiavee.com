@@ -2,11 +2,11 @@
 document.addEventListener('DOMContentLoaded', function(){
   var LANG = (document.documentElement.lang || 'fr').slice(0, 2);
   var I = ({
-    fr: {loc:'fr-FR', menu:'Menu', close:'Fermer', copied:'Copié ✓', ex:'Exemple', more:'Lire sur LinkedIn ↗', words:['la communication','la mobilité verte','la mode','le digital','l’événementiel']},
-    en: {loc:'en-US', menu:'Menu', close:'Close', copied:'Copied ✓', ex:'Example', more:'Read on LinkedIn ↗', words:['communications','green mobility','lifestyle','digital','events']},
-    es: {loc:'es-ES', menu:'Menú', close:'Cerrar', copied:'Copiado ✓', ex:'Ejemplo', more:'Leer en LinkedIn ↗', words:['la comunicación','la movilidad verde','el estilo de vida','lo digital','los eventos']}
+    fr: {loc:'fr-FR', menu:'Menu', close:'Fermer', copied:'Copié ✓', ex:'Exemple', more:'Lire sur LinkedIn ↗︎', words:['la communication','la mobilité verte','la mode','le digital','l’événementiel']},
+    en: {loc:'en-US', menu:'Menu', close:'Close', copied:'Copied ✓', ex:'Example', more:'Read on LinkedIn ↗︎', words:['communications','green mobility','lifestyle','digital','events']},
+    es: {loc:'es-ES', menu:'Menú', close:'Cerrar', copied:'Copiado ✓', ex:'Ejemplo', more:'Leer en LinkedIn ↗︎', words:['la comunicación','la movilidad verde','el estilo de vida','lo digital','los eventos']}
   })[LANG] || null;
-  if(!I){ I = {loc:'fr-FR', menu:'Menu', close:'Fermer', copied:'Copié ✓', ex:'Exemple', more:'Lire sur LinkedIn ↗', words:['la communication']}; }
+  if(!I){ I = {loc:'fr-FR', menu:'Menu', close:'Fermer', copied:'Copié ✓', ex:'Exemple', more:'Lire sur LinkedIn ↗︎', words:['la communication']}; }
   /* Menu des langues : se ferme au clic à l'extérieur ou avec Échap */
   document.addEventListener('click', function(ev){
     Array.prototype.forEach.call(document.querySelectorAll('details.lang[open]'), function(d){ if(!d.contains(ev.target)){ d.removeAttribute('open'); } });

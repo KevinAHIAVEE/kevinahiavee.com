@@ -20,7 +20,7 @@
 .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .bg-blob,.avail i,.progress{font-size:0;line-height:0;color:transparent}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+body{font-variant-emoji:text;margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:clip}
 img{max-width:100%;display:block}
 a{color:inherit}
 ::selection{background:var(--zem);color:var(--ink)}
@@ -106,7 +106,7 @@ a{color:inherit}
 .marquee{padding-block:clamp(28px,4vw,48px);overflow:clip;border-block:1px solid var(--line);background:var(--white)}
 .mq{display:flex;gap:.6em;white-space:nowrap;width:max-content;font:800 clamp(2rem,5vw,4.4rem)/1.1 var(--f-display);font-stretch:100%;letter-spacing:-.03em;text-transform:uppercase}
 .mq span{display:inline-flex;align-items:center;gap:.6em}
-.mq span::after{content:"✳";color:var(--zem);font-size:.6em}
+.mq span::after{content:"✳︎";color:var(--zem);font-size:.6em}
 .mq--o{color:transparent;-webkit-text-stroke:1.5px var(--ink);margin-left:-20vw}
 
 /* Texte qui s'illumine au défilement */
@@ -179,7 +179,7 @@ a{color:inherit}
 .principles{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(40px,6vw,72px) clamp(32px,6vw,96px)}
 .principles li{min-width:0}
 .principles h3{font:700 clamp(1.4rem,2.4vw,1.9rem)/1.15 var(--f-display);letter-spacing:-.02em;margin:0 0 12px;display:flex;gap:12px}
-.principles h3::before{content:"✳";color:var(--zem);flex:none}
+.principles h3::before{content:"✳︎";color:var(--zem);flex:none}
 .principles p{margin:0;color:var(--ink-2);max-width:48ch;padding-left:calc(1em + 12px)}
 
 /* Vision */
@@ -216,7 +216,7 @@ a{color:inherit}
 .macro .src{margin:16px 0 0;font:500 .72rem/1.5 var(--f-mono);color:var(--ink-2)}
 .assets{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:clamp(24px,3vw,36px)}
 .assets li{min-width:0;padding-left:28px;position:relative}
-.assets li::before{content:"✳";position:absolute;left:0;top:.1em;color:var(--zem);font-size:1.2rem}
+.assets li::before{content:"✳︎";position:absolute;left:0;top:.1em;color:var(--zem);font-size:1.2rem}
 .assets p{margin:0;color:var(--ink-2);max-width:52ch}
 
 /* LinkedIn */
